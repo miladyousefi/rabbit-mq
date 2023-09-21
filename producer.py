@@ -5,7 +5,7 @@ import json
 def main():
     credentials = pika.PlainCredentials('rg', 'rg123123')
     parameters = pika.ConnectionParameters(host='192.168.50.35', port=5672, virtual_host='/', credentials=credentials)
-   
+#    test git
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()    
     channel.queue_declare(queue='#')
