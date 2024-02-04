@@ -2,11 +2,11 @@
 import pika, sys, os
 
 def main():
-    credentials = pika.PlainCredentials('admin', 'admin123')
-    parameters = pika.ConnectionParameters(host='192.168.50.33', port=5672, virtual_host='/', credentials=credentials)
+    # credentials = pika.PlainCredentials('admin', '123456')
+    # parameters = pika.ConnectionParameters(host='192.168.50.28', port=5672, virtual_host='/', credentials=credentials)
     
-    # credentials = pika.PlainCredentials('rgbackend', 'hTw6@1l8^Z')
-    # parameters = pika.ConnectionParameters(host='80.191.200.176', port=5672, virtual_host='/', credentials=credentials)
+    credentials = pika.PlainCredentials('admin', 'admin123')
+    parameters = pika.ConnectionParameters(host='192.168.50.41', port=5672, virtual_host='/', credentials=credentials)
     
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()      
