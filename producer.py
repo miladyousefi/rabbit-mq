@@ -15,7 +15,7 @@ def main():
 
 
     credentials = pika.PlainCredentials('RgRabbit', 'ZSNVqEj9b2')
-    parameters = pika.ConnectionParameters(host='195.214.235.212', port=5672, virtual_host='/', credentials=credentials)
+    parameters = pika.ConnectionParameters(host='195.214.235.212', port=5672, virtual_host='/', credentials=credentials,heartbeat=600)
     # print(parameters)
 
 
@@ -43,14 +43,14 @@ def main():
         # time.sleep(4)
         try:
             data = {
-                "imei":'1531das54d',
+                "imei":'aosdkaskdas',
                 "balance":123,
                 "version":2,
                 "battery":1,
                 "ZFI":1,
-                "ZFA":0,
-                "MFA":0,
-                "AFA":0,
+                "ZFA":1,
+                "MFA":1,
+                "AFA":1,
                 "BFA":0,
                 "SFA":0
             }
