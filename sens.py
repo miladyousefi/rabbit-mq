@@ -3,19 +3,17 @@ import pika
 import json
 import time
 def main():
-    # credentials = pika.PlainCredentials('gabpkgoo', 'TCS6PVx12BrAW34FyigUdfGozaWD7pwm')
-    # parameters = pika.ConnectionParameters(host='amqps://gabpkgoo:TCS6PVx12BrAW34FyigUdfGozaWD7pwm@porpoise.rmq.cloudamqp.com/gabpkgoo', port=5672, virtual_host='gabpkgoo', credentials=credentials)
-    
+   
     # credentials = pika.PlainCredentials('admin', 'admin123')
     # parameters = pika.ConnectionParameters(host='192.168.50.33', port=5672, virtual_host='/', credentials=credentials)
 
-    # credentials = pika.PlainCredentials('rgbackend', 'hTw6@1l8^Z')
-    # parameters = pika.ConnectionParameters(host='80.191.200.176', port=5672, virtual_host='/', credentials=credentials)
+    # credentials = pika.PlainCredentials('', '')
+    # parameters = pika.ConnectionParameters(host='', port=5672, virtual_host='/', credentials=credentials)
     #test git
 
 
-    credentials = pika.PlainCredentials('RgRabbit', 'ZSNVqEj9b2')
-    parameters = pika.ConnectionParameters(host='195.214.235.212', port=5672, virtual_host='/', credentials=credentials,heartbeat=600)
+    credentials = pika.PlainCredentials('', '')
+    parameters = pika.ConnectionParameters(host='', port=5672, virtual_host='/', credentials=credentials,heartbeat=600)
 
 
 

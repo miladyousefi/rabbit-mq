@@ -3,11 +3,11 @@ import pika, sys, os
 import json
 
 def main():
-    credentials = pika.PlainCredentials('RgRabbit', 'ZSNVqEj9b2')
-    parameters = pika.ConnectionParameters(host='195.214.235.212', port=5672, virtual_host='/', credentials=credentials)
+    credentials = pika.PlainCredentials('', '')
+    parameters = pika.ConnectionParameters(host='', port=5672, virtual_host='/', credentials=credentials)
     
-    # credentials = pika.PlainCredentials('rgbackend', 'hTw6@1l8^Z')
-    # parameters = pika.ConnectionParameters(host='80.191.200.176', port=5672, virtual_host='/', credentials=credentials)
+    # credentials = pika.PlainCredentials('', '')
+    # parameters = pika.ConnectionParameters(host='', port=5672, virtual_host='/', credentials=credentials)
     
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()      

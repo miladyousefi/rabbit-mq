@@ -3,11 +3,11 @@
     #include <string.h>
     #include <mosquitto.h>
 
-    #define MQTT_BROKER_HOST "195.214.235.212"
+    #define MQTT_BROKER_HOST ""
     #define MQTT_BROKER_PORT 1883
     #define MQTT_TOPIC "main"
-    #define MQTT_USERNAME "admin"
-    #define MQTT_PASSWORD "Admin123"
+    #define MQTT_USERNAME ""
+    #define MQTT_PASSWORD ""
 
     int main() {
         struct mosquitto *mosq = NULL;

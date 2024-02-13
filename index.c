@@ -5,9 +5,9 @@
 #include <amqp.h>
 #include <amqp_framing.h>
 
-#define AMQP_BROKER_HOST "195.214.235.212"
+#define AMQP_BROKER_HOST ""
 #define AMQP_BROKER_PORT 5672
-#define AMQP_QUEUE_NAME "main"
+#define AMQP_QUEUE_NAME ""
 
 int main() {
     amqp_socket_t *socket = NULL;

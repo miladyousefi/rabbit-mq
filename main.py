@@ -32,8 +32,8 @@ def main():
     # parameters = pika.ConnectionParameters(host='80.191.200.176', port=5672, virtual_host='/', credentials=credentials)
 
 
-    credentials = pika.PlainCredentials('admin', 'admin123')
-    parameters = pika.ConnectionParameters(host='192.168.50.41', port=5672, virtual_host='/', credentials=credentials)
+    credentials = pika.PlainCredentials('', '')
+    parameters = pika.ConnectionParameters(host='', port=5672, virtual_host='/', credentials=credentials)
 
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()

@@ -3,9 +3,9 @@ import json
 import pika
 import paho.mqtt.client as mqtt
 
-username = 'RgRabbit'
-password = 'ZSNVqEj9b2'
-rabbitmq_host = "195.214.235.212"
+username = ''
+password = ''
+rabbitmq_host = ""
 rabbitmq_port = 1883  # Default MQTT port
 virtual_host = "/"
 exchange = "main"
