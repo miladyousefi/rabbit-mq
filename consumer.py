@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import pika, sys, os
+import json
 
 def main():
-    credentials = pika.PlainCredentials('admin', 'admin123')
-    parameters = pika.ConnectionParameters(host='192.168.50.33', port=5672, virtual_host='/', credentials=credentials)
+    credentials = pika.PlainCredentials('RgRabbit', 'ZSNVqEj9b2')
+    parameters = pika.ConnectionParameters(host='195.214.235.212', port=5672, virtual_host='/', credentials=credentials)
     
     # credentials = pika.PlainCredentials('rgbackend', 'hTw6@1l8^Z')
     # parameters = pika.ConnectionParameters(host='80.191.200.176', port=5672, virtual_host='/', credentials=credentials)
@@ -13,7 +14,18 @@ def main():
     channel.queue_declare(queue='#')
     
     def callback(ch, method, properties, body):
-        print(" [x] Received %r" % body)
+        # Assuming body is a string
+        body_str = body.decode('utf-8')
+
+        # Construct a valid JSON string
+        json_str = '{"data": {' + body_str + '}}'
+
+        try:
+            data = json.loads(json_str)
+            print(" [x] Parsed data:", data['data'])
+        except json.JSONDecodeError as e:
+            print(" [!] Error decoding JSON:", e)
+
 
     channel.basic_consume(queue='main', on_message_callback=callback, auto_ack=True)
     print(' [*] Waiting for messages. To exit press CTRL+C')
